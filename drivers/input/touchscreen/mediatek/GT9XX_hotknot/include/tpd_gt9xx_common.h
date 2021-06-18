@@ -202,6 +202,8 @@ enum CHIP_TYPE_T {
 #define GTP_REG_VERSION             0x8140
 #define GTP_REG_HW_INFO             0x4220
 #define GTP_REG_REFRESH_RATE		0x8056
+#define GTP_MAX_HEIGHT   1920
+#define GTP_MAX_WIDTH    1080
 
 #define RESOLUTION_LOC              3
 #define TRIGGER_LOC                 8
