@@ -8,7 +8,6 @@
 #else
 #include "mt6753.dts"
 #endif
-#include <dt-bindings/lcm/r63417_fhd_dsi_cmd_truly_nt50358.dtsi>
 
 &reserved_memory {
 	#address-cells = <2>;
@@ -774,6 +773,6 @@
 	status = "okay";
 };
 /* LCM GPIO Kernal Standardization end */
-#include <k53v1_64_bsp/cust.dtsi>
+#include <m2note/cust.dtsi>
 /*End of this file, DO NOT ADD ANYTHING HERE*/
 
