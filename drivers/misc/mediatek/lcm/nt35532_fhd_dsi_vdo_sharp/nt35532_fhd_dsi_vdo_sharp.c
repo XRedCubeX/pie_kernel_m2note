@@ -2,7 +2,6 @@
 #include <linux/string.h>
 #endif
 #include "lcm_drv.h"
-#include <cust_gpio_usage.h>
 #ifdef BUILD_LK
 #include <platform/mt_gpio.h>
 #include <string.h>
@@ -10,8 +9,7 @@
 #elif defined(BUILD_UBOOT)
 #include <asm/arch/mt_gpio.h>
 #else
-#include <mach/mt_gpio.h>
-#include <mach/mt_pm_ldo.h>
+#include <mt-plat/mt_gpio.h>
 #endif
 // ---------------------------------------------------------------------------
 //  Local Constants
