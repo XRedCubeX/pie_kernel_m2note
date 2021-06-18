@@ -10,6 +10,7 @@
 #include <asm/arch/mt_gpio.h>
 #else
 #include <mt-plat/mt_gpio.h>
+//#include <mach/mt_pm_ldo.h>
 #endif
 // ---------------------------------------------------------------------------
 //  Local Constants
@@ -269,18 +270,18 @@ static void lcm_power_switch_stage(bool enable)
 		MDELAY(1);
 		SET_RESET_PIN(1);
 		MDELAY(1);
-		mt_set_gpio_out(GPIO_LCD_BIAS_ENP_PIN, GPIO_OUT_ONE);
+//		mt_set_gpio_out(GPIO_LCD_BIAS_ENP_PIN, GPIO_OUT_ONE);
 		MDELAY(1);
-		mt_set_gpio_out(GPIO_LCD_BIAS_ENN_PIN, GPIO_OUT_ONE);
+//		mt_set_gpio_out(GPIO_LCD_BIAS_ENN_PIN, GPIO_OUT_ONE);
 		MDELAY(10);
 		} 
 	else 
 		{
 		//VSN5V
-		mt_set_gpio_out(GPIO_LCD_BIAS_ENN_PIN, GPIO_OUT_ZERO);
+//		mt_set_gpio_out(GPIO_LCD_BIAS_ENN_PIN, GPIO_OUT_ZERO);
 		MDELAY(1);
 		//VSP5V
-		mt_set_gpio_out(GPIO_LCD_BIAS_ENP_PIN, GPIO_OUT_ZERO);
+//		mt_set_gpio_out(GPIO_LCD_BIAS_ENP_PIN, GPIO_OUT_ZERO);
 		MDELAY(1);
 		SET_RESET_PIN(0);
 		}
@@ -395,10 +396,10 @@ static unsigned int lcm_compare_id(void)
   	unsigned int ret = 0;
 	unsigned int sw_id = 0;
 	
-	mt_set_gpio_mode(GPIO_LCD_ID_PIN, GPIO_MODE_00);
-	mt_set_gpio_dir(GPIO_LCD_ID_PIN, GPIO_DIR_IN);
+//	mt_set_gpio_mode(GPIO_LCD_ID_PIN, GPIO_MODE_00);
+//	mt_set_gpio_dir(GPIO_LCD_ID_PIN, GPIO_DIR_IN);
 
-	ret = mt_get_gpio_in(GPIO_LCD_ID_PIN);
+//	ret = mt_get_gpio_in(GPIO_LCD_ID_PIN);
 	sw_id = lcm_get_ddi_id();
 
 	lcm_print("lcm_compare_id ret=%d sw_id = %X\n",ret,sw_id);
